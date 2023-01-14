@@ -2,50 +2,29 @@
 
 **CK5 Normal/Restrict 双模式通用组件，VUE3 + typescript **
 
-## 安装依赖
-```
-yarn install
-```
 
-### CK插件 开发模式
-```
-npm run dev
-```
 
-### 打包为lib(后续视情况会搞个一键发布脚本)
-```
-npm run lib
-```
+一个基于 CkEditor5 && Vue 二次封装的编辑器组件
 
-### 发布 npm包
+自己基于 CkEditor5 plugin 开发了一些需要用到的业务功能
 
-** npm run lib完成后，cd lib 需要手动创建 package.json (npm init -y)**
 
-![image-20230109150857180](../cmd1.png)
 
-修改NPM包的信息以及Version
+An editor component based on CK5&&Vue secondary encapsulation
 
-```json
-{
-  "name": "lib",   // => 修改为bit-editor
-  "version": "1.0.0",  // => 在npm 当前版本 + 0.0.1
-  "main": "bitEditor.common.js", 
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-}
 
-```
 
-最后：
+I developed some business functions needed based on CkEditor5 plugin
 
-```
-npm run publish
-```
+
+
+\```vue
+
+//Component Props <BitEditor mode="normal" //normal or restrict id="id" class="some classes"
+
+:data="htmlData" :on-mounted="editorMounted" //callback (editor) =>{......} />
+
+\```
 
 ## CK5 插件开发结构规范（可直接复制后进行改造）：
 
