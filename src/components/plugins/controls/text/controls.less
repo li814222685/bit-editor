@@ -1,0 +1,219 @@
+.rawSelect {
+  width: 200px;
+  height: 30px;
+  border: 2px solid red;
+}
+
+/* Select 最外层容器 */
+.v_select {
+  /* 事实上Select 的宽高应该是自适应的，支持外部参数来改变 Select 对应的宽高 */
+  width: inherit;
+  height: 20px;
+  background: #ffefdf;
+  .ck-widget__type-around__button {
+    display: none !important;
+  }
+
+  .ck-editor__nested-editable:focus {
+    border: none;
+  }
+}
+.ck-widget_selected,
+.ck-widget_selected:hover {
+  outline: none !important;
+}
+.ck-widget__selection-handle {
+  display: none;
+}
+.v_select:hover {
+  outline: none !important;
+}
+.v_select:focus {
+  outline: red !important;
+}
+.v_select::selection {
+  display: none;
+}
+
+/* Select 的选择框 */
+.v_select_dropDown {
+  position: relative;
+  background: inherit !important;
+}
+.v_select_dropDown:focus {
+  outline: red !important;
+}
+
+/* 可输入 选择框文字部分  */
+.v_select_dropDown_text {
+  display: block;
+  height: inherit;
+  /* padding: 0 10px; */
+  // border-bottom: 1px solid #d8d7d9 !important;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background: inherit !important;
+}
+.v_select_dropDown_text :focus {
+  outline: red !important;
+}
+
+/* 打开Option列表 选择框选中后的样式 */
+.v_select_dropDown_text_sele {
+  display: block;
+  // padding: 0 10px;
+  // height: 28px;
+  /* border: 1px solid #1769fe; */
+  border-bottom: 2px solid rgba(218, 130, 36, 0.437);
+
+  border-radius: 4px;
+  font-size: 16px;
+  /* color: #1968ff; */
+  /* background: #dce9ff; */
+  // background: rgba(255, 169, 77, 0.2);
+}
+
+.v_select_dropDown_text,
+.v_select_dropDown_text_sele {
+  p {
+    margin: 0;
+  }
+}
+
+/* 修改ContentEditable 的默认Style */
+[contenteditable] {
+  outline: 1px solid transparent;
+}
+
+[contenteditable]:focus {
+  border-bottom: 3px solid rgba(191, 111, 26, 0.437);
+  border-radius: 3px;
+}
+
+/*Select 箭头的样式  */
+.triangle_up {
+  width: 0;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto 0;
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(235, 142, 42, 0.437);
+}
+
+.triangle_down {
+  transform: rotate(-135deg) !important;
+  -webkit-transform: rotate(-135deg) !important;
+  border: 3px solid black;
+  /* 上、右、下、左 四个边框的宽度 */
+  border-width: 0px 1px 1px 0px;
+
+  display: inline-block;
+  /* padding值控制箭头大小 */
+  padding: 5px;
+
+  width: 0;
+  height: 0;
+  right: 8px;
+  top: 12px;
+  position: absolute;
+  // border-left: 8px solid transparent;
+  // border-right: 8px solid transparent;
+  // border-top: 8px solid rgba(235, 142, 42, 0.437);
+  // transform: rotate(180deg);
+  // transition: transform 0.2s linear;
+}
+
+/* Option 列表   */
+
+.v_select_optionList {
+  // border: 1px solid rgba(218, 130, 36, 0.437);
+  width: inherit;
+  background-color: white;
+  display: block;
+  position: absolute;
+  max-height: 105px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: 4px 6px 6px -5px #000;
+  z-index: 999;
+  border-top: 2px solid #0077be !important;
+  border-left: 1px solid #e0e0e0 !important;
+  border-right: 1px solid #e0e0e0 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  padding-right: 10px;
+  margin-left: -6px;
+  margin-top: -1px;
+  animation: slideContentUp 0.2s linear both;
+}
+
+@keyframes slideContentUp {
+  from {
+    height: 0;
+  }
+  to {
+    height: 105px;
+  }
+}
+
+.v_select_optionList_item {
+  width: 100%;
+  padding: 5px;
+  // background-color: rgb(250, 235, 215);
+}
+
+.v_select_optionList_item:hover {
+  background-color: #eeeeeeb3;
+}
+
+.hidden_item {
+  display: none;
+}
+.table table tbody :first-child td {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  background-color: #eeeeeeb3;
+  cursor: pointer !important;
+  span {
+    cursor: pointer !important;
+  }
+}
+// .table table tbody :first-child td:hover {
+//   background-color: #cccacab3;
+// }
+//去除锚点选中后的 聚焦边框和背景
+// .table table tbody :first-child td:focus,
+// .table table tbody tr td:first-child:focus {
+//   background-color: #cccacab3 !important;
+//   outline: none !important;
+// }
+.table table tbody tr td:first-child {
+  background-color: #eeeeeeb3;
+  padding: 0px !important;
+  width: 22px;
+  cursor: pointer !important;
+
+  span {
+    cursor: pointer !important;
+  }
+}
+.restricted-cell-bgColor {
+  background-color: rgba(255, 169, 77, 0.2) !important;
+}
+tr {
+  // max-height: 20px !important;
+
+  .ck-editor__editable .restricted-editing-exception {
+    background-color: inherit !important;
+    border: none !important;
+    padding: 0px;
+  }
+}
+//锚点选中行的样式
+.ck-editor__editable_selected {
+  background-color: #e3f1fd !important;
+}

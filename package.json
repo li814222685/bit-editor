@@ -1,0 +1,85 @@
+{
+  "name": "bit-editor",
+  "version": "0.1.1",
+  "private": false,
+  "description": "ck5二次封装",
+  "files": [
+    "dist",
+    "dist/**"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name bitEditor --dest lib src/index.ts"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^35.1.0",
+    "@ckeditor/ckeditor5-dev-utils": "^30.4.0",
+    "@ckeditor/ckeditor5-dev-webpack-plugin": "^30.4.0",
+    "@ckeditor/ckeditor5-editor-classic": "^35.0.1",
+    "@ckeditor/ckeditor5-essentials": "^35.0.1",
+    "@ckeditor/ckeditor5-heading": "^35.1.0",
+    "@ckeditor/ckeditor5-html-support": "^35.1.0",
+    "@ckeditor/ckeditor5-link": "^35.0.1",
+    "@ckeditor/ckeditor5-paragraph": "^35.0.1",
+    "@ckeditor/ckeditor5-image": "^35.1.0",
+    "@ckeditor/ckeditor5-restricted-editing": "^35.1.0",
+    "@ckeditor/ckeditor5-table": "^35.2.1",
+    "@ckeditor/ckeditor5-theme-lark": "^35.0.1",
+    "@ckeditor/ckeditor5-vue": "^4.0.1",
+    "@types/ckeditor__ckeditor5-core": "^33.0.3",
+    "@types/ckeditor__ckeditor5-editor-classic": "^27.1.2",
+    "@types/ckeditor__ckeditor5-engine": "^32.0.11",
+    "core-js": "^3.8.3",
+    "element-plus": "^2.2.18",
+    "himalaya": "^1.1.0",
+    "lodash": "^4.17.21",
+    "mitt": "^3.0.0",
+    "postcss-loader": "^4.3.0",
+    "raw-loader": "^4.0.2",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "prettier": "^2.4.1",
+    "style-resources-loader": "^1.5.0",
+    "typescript": "~4.5.5",
+    "vue-cli-plugin-style-resources-loader": "^0.1.5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "@vue/typescript/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
